@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# 🛡️ SENTINEL — Border Surveillance System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+> **A real-time AI-powered border surveillance system with advanced threat detection, person tracking, night vision, and intelligent zone monitoring.**
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚡ Features
 
-### `npm run build`
+- 🎯 **Real-time Person Detection** — YOLOv8-powered multi-person tracking with unique ID assignment
+- 🚨 **Loiter Detection** — Flags individuals who stay in a zone beyond a threshold time
+- 👥 **Surge Detection** — Detects sudden crowd gatherings or mass movements
+- 🌙 **Night Vision Mode** — Enhanced low-light video processing for 24/7 surveillance
+- 📍 **Restricted Zone Drawing** — Draw custom sectors and tripwires on the video feed
+- 📊 **Threat Level System** — Dynamic LOW / MEDIUM / HIGH threat status display
+- 🎥 **Live Video Feed** — Real-time WebSocket-based video streaming
+- 🗂️ **Alert Log** — Auto-recorded event history with timestamps
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Layer | Technology |
+|---|---|
+| Frontend | React |
+| Backend | Python, FastAPI |
+| AI/ML | YOLOv8 (Ultralytics) |
+| Video | OpenCV |
+| Streaming | WebSocket (uvicorn[standard]) |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
+- Python 3.9+
+- Node.js 16+
+- pip
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Backend Setup
+```bash
+cd border\ survailance
+pip install -r requirements.txt
+pip install 'uvicorn[standard]'
+python run.py
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Frontend Setup
+```bash
+cd surveillance-dashboard
+npm install
+npm start
+```
 
-## Learn More
+The app will be available at `http://localhost:3000`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📁 Project Structure
 
-### Code Splitting
+```
+sentinel-border-surveillance/
+├── border survailance/        # Python Backend
+│   ├── run.py
+│   └── requirements.txt
+└── surveillance-dashboard/    # React Frontend
+    ├── src/
+    └── package.json
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 💡 Why SENTINEL?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Traditional surveillance systems require constant human monitoring. SENTINEL uses AI to automatically detect threats, track individuals, and alert operators — enabling smarter, faster, and more reliable border security.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📄 License
 
-### Advanced Configuration
+MIT License © 2026 Ritvik
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Built for intelligent, real-time border security. 🔒
